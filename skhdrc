@@ -1,0 +1,73 @@
+# Programs
+alt - return : open -n /Applications/iTerm.app
+cmd + alt - f : open /System/Library/CoreServices/Finder.app
+cmd + alt - b : open -n /Applications/Google\ Chrome.app
+
+# Focus
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# Change display focus
+ctrl - 1 : yabai -m display --focus 1
+ctrl - 2 : yabai -m display --focus 2
+
+# Change space focus - doesn't do anything unless SIP disabled
+# alt - 1 : yabai -m space --focus 1
+# alt - 2 : yabai -m space --focus 2
+# alt - 3 : yabai -m space --focus 3
+# alt - 4 : yabai -m space --focus 4
+# alt - 5 : yabai -m space --focus 5
+# alt - 6 : yabai -m space --focus 6
+
+# Move
+shift + alt - h : yabai -m window --swap west
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - l : yabai -m window --swap east
+
+# Move focus container to workspace
+shift + alt - 1 : yabai -m window --space 1
+shift + alt - 2 : yabai -m window --space 2
+shift + alt - 3 : yabai -m window --space 3
+shift + alt - 4 : yabai -m window --space 4
+shift + alt - 5 : yabai -m window --space 5
+shift + alt - 6 : yabai -m window --space 6
+shift + alt - 7 : yabai -m window --space 7
+shift + alt - 8 : yabai -m window --space 8
+shift + alt - 9 : yabai -m window --space 9
+shift + alt - 0 : yabai -m window --space 10
+# Resize windows
+alt - 0x2B : yabai -m window --resize left:-25:0; yabai -m window --resize right:-25:0 # comma, left
+alt - 0x2F : yabai -m window --resize right:25:0; yabai -m window --resize left:25:0 # period, right
+
+lctrl - j : \
+    yabai -m window --resize bottom:0:20 ; \
+    yabai -m window --resize top:0:20
+
+lctrl - k : \
+    yabai -m window --resize top:0:-20 ; \
+    yabai -m window --resize bottom:0:-20
+
+# Equalize size of windows
+alt - b: yabai -m space --balance
+
+# Flip the tree horizontally
+alt - m: yabai -m space --mirror x-axis
+
+# Flip the tree vertically
+shift + alt - m: yabai -m space --mirror y-axis
+
+# Float / Unfloat window
+shift + alt - f : yabai -m window --toggle float
+
+# Restart Yabai
+shift + alt - r : brew services restart yabai
+
+# Make window native fullscreen
+alt - f         : yabai -m window --toggle zoom-fullscreen
+ctrl + alt - f : yabai -m window --toggle native-fullscreenc
+
+# Change window split type
+alt - e : yabai -m window --toggle split
